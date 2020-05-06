@@ -3,11 +3,45 @@
     height: 100px;
 }
 
-.TierRankInfo {
+.tierRankInfo {
     display: table-cell;
     vertical-align: middle;
     font-size: 12px;
     line-height: 1.5;
     text-align: left;
     margin-left: 10px;
+}
+
+.champion__list {
+
+    li {
+        float: left;
+
+        a {
+            display: contents;
+            padding: 1rem;
+
+            img {
+                width: 4rem;
+                height: 4rem;
+            }
+        }
+    }
+}
+
+.header__card {
+    width: 600px;
+    margin: auto;
+    margin-bottom: 3rem;
+}
+
+.header__info {
+    text-align: center;
+    
+    a {
+
+        img {
+            width: 25rem;
+        }
+    }
 }

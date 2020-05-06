@@ -46,11 +46,15 @@ body a {
 .header {
   max-width: 500px;
   margin: 50px auto;
+  margin-top: 0px;
   text-align: center;
 }
 
 .header__title {
   margin-bottom: 30px;
+  color: #2c2c2c;
+  font-size: 24px;
+  margin-top: 0px;
   font-weight: 500;
 }
 
@@ -60,6 +64,7 @@ body a {
 }
 
 .content__title {
+  margin-top: 5rem;
   margin-bottom: 20px;
   font-size: 18px;
   font-weight: 500;
@@ -68,7 +73,7 @@ body a {
 
 .content__inner {
   width: 500px;
-  height: 1500px;
+  height: 200rem;
   margin: auto;
   margin-bottom: 5rem;
   -webkit-box-shadow: 0 8px 17px 2px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
@@ -204,7 +209,7 @@ body a {
 
 .tabs__panel-content {
   width: 100%;
-  margin-left: 10px;
+  margin-left: 1rem;
 }
 
 .tabs__panel-content:first-child {
@@ -218,7 +223,6 @@ body a {
 .tabs__panel-content:before, .tabs__panel-content:after {
   display: block;
   width: 100%;
-  height: 20px;
   content: "";
   background-color: #ffffff00;
 }

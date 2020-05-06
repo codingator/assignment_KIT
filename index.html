@@ -1,3 +1,8 @@
+<!-- 
+  API 값 기반 자동적용
+  선택 된 값 교체
+  판 높이 조절
+-->
 <!DOCTYPE html>
 <html lang="kr">
   <head>
@@ -14,13 +19,32 @@
       href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap"
       rel="stylesheet"
     />
-    <title>Document</title>
+    <title>Demacia</title>
   </head>
   <body>
+    <!--header title-->
+    <h2 class="header">프로필 작성 페이지</h2>
+    <div class="tabs__panel-card header__card">
+      <div class="tabs__panel-avatar">
+        <img
+          src="https://ddragon.leagueoflegends.com/cdn/10.9.1/img/profileicon/539.png"
+          class="image"
+        />
+      </div>
+      <div class="tabs__panel-content">
+        <div class="header">
+          <h1 class="header__title">Turn on the B</h1><!-- 소환사 이름-->
+          <div class="header__btns btns">
+            <a class="header__btn btn" href="#">업데이트</a>
+          </div>
+        </div>
+        <div class="header__info">
+          <a href="#"><img src="temp.png"></a>
+        </div>
+      </div>
+    </div>
     <!--PEN CONTENT-->
     <div class="content">
-      <!--content title-->
-      <h2 class="content__title">Click to any navigation link</h2>
       <!--content inner-->
       <div class="content__inner">
         <!--tabs-->
@@ -28,8 +52,8 @@
           <!--tabs navigation-->
           <div class="tabs__nav">
             <ul class="tabs__nav-list">
-              <li class="tabs__nav-item js-active">Profile</li>
-              <li class="tabs__nav-item">Settings</li>
+              <li class="tabs__nav-item js-active">미리보기</li>
+              <li class="tabs__nav-item">설정</li>
             </ul>
           </div>
           <!--tabs panels-->
@@ -43,8 +67,79 @@
                     class="image"
                   />
                 </div>
-                <div class="tabs__panel-content">Gold 3</div>
+                <div class="tabs__panel-content">
+                  <div class="tierRankInfo">
+                    <div>솔로랭크</div>
+                    <div>Gold 3</div>
+                    <div>
+                      <div>35 LP / 32승 35패</div>
+                      <div>승률 48%</div>
+                    </div>
+                    <div>베인의 광신도들</div>
+                  </div>
+                </div>
               </div>
+              <div class="tabs__panel-card">
+                <div class="tabs__panel-avatar">
+                  <img
+                    src="https://kr-cdn.poro.gg/images/lol/role/mid.svg"
+                    class="image"
+                  />
+                </div>
+                <div class="tabs__panel-content">
+                  <div class="tierRankInfo">
+                    <div>미드</div>
+                    <div>승률 75%</div>
+                  </div>
+                </div>
+              </div>
+              <div class="tabs__panel-card">
+                <div class="tabs__panel-avatar">
+                  <img
+                    src="https://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Zoe.png"
+                    class="image"
+                  />
+                </div>
+                <div class="tabs__panel-content">
+                  <div class="tierRankInfo">
+                    <div>조이</div>
+                    <div>47% (7승 8패)</div>
+                    <div>2.48 평점</div>
+                  </div>
+                </div>
+              </div>
+              <div class="tabs__panel-card">
+                <div class="tabs__panel-avatar">
+                  <img
+                    src="https://icon-icons.com/icons2/759/PNG/128/moustache-male-face-emoticon-symbol_icon-icons.com_64308.png"
+                    class="image"
+                  />
+                </div>
+                <div class="tabs__panel-content">
+                  <div class="tierRankInfo">
+                    <div>성  별 : 남성</div>
+                    <div>연  령 : 20대</div>
+                    <div>마이크 : 사용 가능</div>
+                  </div>
+                </div>
+              </div>
+              <div class="tabs__panel-card">
+                <div class="tabs__panel-avatar">
+                  <img
+                    src="https://icon-icons.com/icons2/607/PNG/128/pc-computer-with-monitor_icon-icons.com_56249.png"
+                    class="image"
+                  />
+                </div>
+                <div class="tabs__panel-content">
+                  <div class="tierRankInfo">
+                    <div>서  버 : KR</div>
+                    <div>플랫폼 : 디스코드, 롤 클라이언트...</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--single panel-->
+            <div class="tabs__panel">
               <div class="tabs__panel-card">
                 <div class="tabs__panel-avatar">
                   <img
@@ -66,7 +161,7 @@
                               src="//opgg-static.akamaized.net/images/medals/gold_3.png?image=q_auto&v=1"
                               class="image"
                             />
-                            <div class="TierRankInfo">
+                            <div class="tierRankInfo">
                               <div>솔로랭크</div>
                               <div>Gold 3</div>
                               <div>
@@ -83,7 +178,7 @@
                               src="https://opgg-static.akamaized.net/images/medals/default.png"
                               class="image"
                             />
-                            <div class="TierRankInfo">
+                            <div class="tierRankInfo">
                               <div>자유 5:5 랭크</div>
                               <div>Unranked</div>
                             </div>
@@ -115,7 +210,7 @@
                               src="https://kr-cdn.poro.gg/images/lol/role/mid.svg"
                               class="image"
                             />
-                            <div class="TierRankInfo">
+                            <div class="tierRankInfo">
                               <div>미드</div>
                               <div>승률 75%</div>
                             </div>
@@ -127,7 +222,7 @@
                               src="https://kr-cdn.poro.gg/images/lol/role/sup.svg"
                               class="image"
                             />
-                            <div class="TierRankInfo">
+                            <div class="tierRankInfo">
                               <div>서포트</div>
                               <div>승률 15%</div>
                             </div>
@@ -153,17 +248,169 @@
                         선호 챔피언<i class="fa fa-chevron-down"></i>
                       </div>
                       <ul class="submenu">
-                        <li><a href="#"><img
-                          src="https://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Zoe.png"
-                          class="image"
-                        />
-                        <div class="TierRankInfo">
-                          <div>조이</div>
-                          <div>47% (7승 8패)</div>
-                          <div>2.48 평점</div>
-                        </div></a></li>
-                        <li><a href="#">HTML</a></li>
-                        <li><a href="#">CSS</a></li>
+                        <li>
+                          <a href="#"
+                            ><img
+                              src='https://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Zoe.png'
+                              class="image"
+                            />
+                            <div class="tierRankInfo">
+                              <div>조이</div>
+                              <div>47% (7승 8패)</div>
+                              <div>2.48 평점</div>
+                            </div></a
+                          >
+                        </li>
+                        <ul class="champion__list">
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Aatrox.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Ahri.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Akali.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Alistar.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Amumu.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Anivia.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Annie.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Aphelios.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Ashe.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/AurelionSol.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Azir.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Bard.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Blitzcrank.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Brand.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Braum.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Caitlyn.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Camille.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Cassiopeia.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Chogath.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Corki.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Darius.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Diana.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Draven.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/DrMundo.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Ekko.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Elise.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Evelynn.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Ezreal.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Fiddlesticks.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Fiora.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Fizz.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Galio.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Gangplank.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Garen.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Gnar.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Gragas.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Graves.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Hecarim.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Heimerdinger.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Illaoi.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Irelia.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Ivern.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Janna.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/JarvanIV.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Jax.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Jayce.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Jhin.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Jinx.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Kaisa.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Kalista.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Karma.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Karthus.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Kassadin.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Katarina.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Kayle.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Kayn.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Kennen.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Khazix.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Kindred.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Kled.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/KogMaw.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Leblanc.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/LeeSin.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Leona.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Lissandra.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Lucian.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Lulu.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Lux.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Malphite.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Malzahar.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Maokai.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/MasterYi.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/MissFortune.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/MonkeyKing.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Mordekaiser.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Morgana.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Nami.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Nasus.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Nautilus.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Neeko.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Nidalee.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Nocturne.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Nunu.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Olaf.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Orianna.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Ornn.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Pantheon.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Poppy.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Pyke.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Qiyana.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Quinn.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Rakan.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Rammus.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/RekSai.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Renekton.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Rengar.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Riven.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Rumble.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Ryze.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Sejuani.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Senna.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Sett.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Shaco.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Shen.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Shyvana.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Singed.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Sion.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Sivir.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Skarner.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Sona.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Soraka.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Swain.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Sylas.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Syndra.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/TahmKench.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Taliyah.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Talon.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Taric.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Teemo.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Thresh.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Tristana.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Trundle.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Tryndamere.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/TwistedFate.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Twitch.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Udyr.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Urgot.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Varus.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Vayne.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Veigar.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Velkoz.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Vi.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Viktor.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Vladimir.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Volibear.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Warwick.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Xayah.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Xerath.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/XinZhao.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Yasuo.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Yorick.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Yuumi.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Zac.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Zed.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Ziggs.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Zilean.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Zoe.png"></a></li>
+                          <li><a href="#"><img src="http://ddragon.leagueoflegends.com/cdn/10.9.1/img/champion/Zyra.png"></a></li>  
+                        </ul>
                       </ul>
                     </li>
                   </ul>
@@ -172,7 +419,7 @@
               <div class="tabs__panel-card">
                 <div class="tabs__panel-avatar">
                   <img
-                    src="//opgg-static.akamaized.net/images/medals/gold_3.png?image=q_auto&v=1"
+                    src="https://icon-icons.com/icons2/759/PNG/128/moustache-male-face-emoticon-symbol_icon-icons.com_64308.png"
                     class="image"
                   />
                 </div>
@@ -181,12 +428,18 @@
                   <ul class="accordion">
                     <li>
                       <div class="link">
-                        포지션<i class="fa fa-chevron-down"></i>
+                        플레이어 정보<i class="fa fa-chevron-down"></i>
                       </div>
                       <ul class="submenu">
-                        <li><a href="#">Photoshop</a></li>
-                        <li><a href="#">HTML</a></li>
-                        <li><a href="#">CSS</a></li>
+                        <li>
+                          <a href="#"><div>성 별 : 남성</div> </a>
+                        </li>
+                        <li>
+                          <a href="#"><div>연 령 : 20대</div></a>
+                        </li>
+                        <li>
+                          <a href="#"><div>마이크 : 사용 가능</div></a>
+                        </li>
                       </ul>
                     </li>
                   </ul>
@@ -195,7 +448,7 @@
               <div class="tabs__panel-card">
                 <div class="tabs__panel-avatar">
                   <img
-                    src="//opgg-static.akamaized.net/images/medals/gold_3.png?image=q_auto&v=1"
+                    src="https://icon-icons.com/icons2/607/PNG/128/pc-computer-with-monitor_icon-icons.com_56249.png"
                     class="image"
                   />
                 </div>
@@ -204,31 +457,17 @@
                   <ul class="accordion">
                     <li>
                       <div class="link">
-                        포지션<i class="fa fa-chevron-down"></i>
+                        플레이 환경<i class="fa fa-chevron-down"></i>
                       </div>
                       <ul class="submenu">
-                        <li><a href="#">Photoshop</a></li>
-                        <li><a href="#">HTML</a></li>
-                        <li><a href="#">CSS</a></li>
+                        <li><a href="#">서 버 : KR</a></li>
+                        <li>
+                          <a href="#">플랫폼 : 디스코드, 롤 클라이언트...</a>
+                        </li>
                       </ul>
                     </li>
                   </ul>
                 </div>
-              </div>
-            </div>
-            <!--single panel-->
-            <div class="tabs__panel">
-              <div class="tabs__panel-card">
-                <div class="tabs__panel-content"></div>
-                <div class="tabs__panel-content"></div>
-              </div>
-              <div class="tabs__panel-card">
-                <div class="tabs__panel-content"></div>
-              </div>
-              <div class="tabs__panel-card tabs__panel-card--spaced-between">
-                <div class="tabs__panel-img"></div>
-                <div class="tabs__panel-img"></div>
-                <div class="tabs__panel-img"></div>
               </div>
             </div>
           </div>
